@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% load bootstrap5 %}
+
+{% block content %}
+    <div class="contact-card">
+        <h1>Contact us</h1>
+
+        <p>Add your contact info below and we will contact you</p>
+        <form action="{% url 'landing_page:contact_us' %}" method="post" class="form">
+            {% csrf_token %}
+
+            {% bootstrap_form form %}
+
+            {% buttons %}
+            <button name="submit" class="buttons">Submit Info</button>
+            {% endbuttons %}
+        </form>
+    </div>
+{% endblock content %}

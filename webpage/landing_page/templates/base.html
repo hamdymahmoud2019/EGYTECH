@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load bootstrap5 %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    <script src="{% static 'source.js' %}" defer></script>
+    <title>Egytech: {% block title %}{% endblock title %}</title>
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body>
+    <div class="page-container">
+        <div class="navtop navbar-primary">
+            <div class="logo"><a class="nav-link" href="{% url 'landing_page:home' %}">LOGO PLACEHOLDER</a></div>
+            <ul class="nav-links">
+                {% if user.is_authenticated %}
+                    <li class="nav-link">Welcome, {{ user.username }}</li>
+                    <li><a class="nav-link" href="{% url 'users:logout' %}">Logout</a></li>
+                {% else %}
+                    <li><a class="nav-link" href="{% url 'users:register' %}">Register</a></li>
+                    <li><a class="nav-link" href="{% url 'users:login' %}">Login</a></li>
+                {% endif %}
+                <li><a class="nav-link" href="{% url 'landing_page:contact_us' %}">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="header">
+            {% block header %}
+            {% endblock header %}
+        </div>
+        <div class="content-area">
+            {% block content %}
+            {% endblock content %}
+        </div>
+
+        <div class="footer">
+            <img src="" alt="logo">
+            <p>EgyTech 2022 ©</p>
+        </div>
+    </div>
+</body>
+</html>
