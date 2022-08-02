@@ -1,0 +1,155 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.page-container{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    background-color: linear-gradient(90deg, aquamarine, black);
+    overflow: scroll;
+}
+
+.logo{
+    font-weight: bold;
+    color: aquamarine;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+}
+.header{
+    margin: 50px;
+    width: 100%;
+    padding: 20px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,18,1) 35%, rgb(0, 124, 85) 100%);
+    border: 2px solid aquamarine;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: aquamarine;
+}
+.header .welcome{
+    color: white;
+}
+.footer , .navtop {
+    color: aquamarine;
+    margin-top: auto;
+    width: 99.2%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,18,1) 35%, rgb(0, 124, 85) 100%);
+    border-radius: 10px;
+    padding: 0px 10px;
+    position: fixed;
+    display: flex;
+    border: 2px solid aquamarine;
+}
+
+.navtop{
+    border-bottom: 0px;
+}
+.footer{
+    gap: 10px;
+    padding: 10px 10px 10px;
+    align-content: center;
+    justify-content: center;
+    bottom: 0;
+}
+
+.navtop{
+    align-content: center;
+    justify-content: space-between;
+    margin-bottom: auto;
+}
+
+.navtop a {
+    color: aquamarine;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navtop a:hover{
+    background-color: aquamarine;
+    color: black;
+}
+
+.navtop a.active{
+    background-color: #02a855 !important;
+}
+
+.content-area {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    justify-self: center;
+    flex:1 1 auto;
+    color: aquamarine;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+.summary, .contact-card, .form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.summary p {
+    font-size: 20px;
+}
+
+
+
+button{
+    background-color: black;
+    color: aquamarine;
+    font-weight: bold;
+    border-radius: 5px !important;
+    padding: 10px;
+}
+
+
+.contact-card{
+}
+
+.team, .services{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.cards{
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    gap: 50px;
+}
+
+.team .card{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-items: center;
+    background-color: black !important;
+    color: aquamarine !important;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+
+.nav-links{
+    display: flex;
+}
+
+
+ul{
+    list-style-type: none;
+    margin: 0px;
+    padding:0px;
+}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load bootstrap5 %}
+
+{% block title %}
+    Login
+{% endblock title %}
+
+{% block header %}
+    <h3>Login</h3>
+{% endblock header %}
+{% block content %}
+{% include '_partials/messages.html' %}
+        <form method="post" action="{% url 'users:login' %}" class="form">
+            {% csrf_token %}
+            <div class="mb-5">
+            <label for="userInput" class="form-label">Username</label>
+            <input type="text" required class="form-control" name="Username" placeholder="Username" value="{{ data.Username }}" id="userInput">
+            </div>
+            <div class="mb-5">
+            <input type="password" required class="form-control" name="Password" placeholder="Passeword">
+            </div>
+            <button name="submit">login</button>
+            <input type="hidden" name="next" value="{% url 'landing_page:home' %}"/>
+        </form>
+{% endblock content %}
